@@ -18,3 +18,8 @@ function increaseScore() {
 document.getElementById("showMessage").addEventListener("click", function() {
     document.getElementById("hiddenMessage").classList.toggle("hidden");
 });
+
+// Nextpage//
+ function goToNextPage() {
+            window.location.href = "valentines.html"; // Redirects to second page
+        }
