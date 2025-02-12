@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #ffdde1;
+    color: #333;
     margin: 0;
     padding: 0;
 }
@@ -35,13 +36,10 @@ button:hover {
     background-color: #ff2e3d;
 }
 
-/* Hide elements initially */
 .hidden {
     display: none;
-    margin-top: 20px;
 }
 
-/* Video Styling */
 video {
     width: 250px;
     border-radius: 10px;
@@ -51,7 +49,11 @@ video {
     transition: opacity 1s ease-in-out;
 }
 
-/* Game Container */
+.game-container {
+    display: none;
+    margin-top: 20px;
+}
+
 .heart {
     font-size: 40px;
     cursor: pointer;
@@ -66,19 +68,4 @@ video {
 .score {
     font-size: 20px;
     margin-top: 10px;
-}
-
-.next-btn {
-    font-size: 1.5em;
-    padding: 15px 30px;
-    background-color: #ff4d79;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-    border-radius: 10px;
-}
-
-.next-btn:hover {
-    background-color: #ff1a5c;
 }
