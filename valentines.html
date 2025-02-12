@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine???</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script> <!-- Confetti library -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 20vh;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #d63384;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 1.5em;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 10px;
+        }
+        .yes-btn {
+            background-color: #ff4d79;
+            color: white;
+        }
+        .yes-btn:hover {
+            background-color: #ff1a5c;
+        }
+        .no-btn {
+            background-color: #cccccc;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <div class="buttons">
+            <button class="yes-btn" onclick="sayYes()">Yes</button>
+            <button class="no-btn" id="noButton" onmouseover="shrinkNo()">No</button>
+        </div>
+    </div>
+
+    <script>
+        let noSize = 1.5; // Initial font size in em
+
+        function sayYes() {
+            alert("Yayyyyy! I love you!!!! ❤️🥰");
+            launchConfetti();
+        }
+
+        function shrinkNo() {
+            let noButton = document.getElementById("noButton");
+            noSize *= 0.8; // Reduce size by 20%
+            noButton.style.fontSize = noSize + "em";
+
+            if (noSize < 0.5) {
+                noButton.style.display = "none"; // Hide button if too small
+            }
+        }
+
+        function launchConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    </script>
+</body>
+</html>
