@@ -67,3 +67,18 @@ video {
     font-size: 20px;
     margin-top: 10px;
 }
+
+.next-btn {
+    font-size: 1.5em;
+    padding: 15px 30px;
+    background-color: #ff4d79;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.next-btn:hover {
+    background-color: #ff1a5c;
+}
