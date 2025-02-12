@@ -13,8 +13,3 @@ function increaseScore() {
     score++;
     document.getElementById("score").innerText = score;
 }
-
-// Toggle hidden message when button is clicked
-document.getElementById("showMessage").addEventListener("click", function() {
-    document.getElementById("hiddenMessage").classList.toggle("hidden");
-});
