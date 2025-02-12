@@ -31,7 +31,10 @@
             </div>
         </div>
     </div>
-    <script src="data.js">
+    <button onclick="goToNextPage()" class="next-btn">Next ➡️</button>
+<script>
+    function goToNextPage() {
+        window.location.href = "valentine.html"; // Redirect to the second page
          // Function to show the game after a delay
          setTimeout(function() {
             document.getElementById("videoContainer").style.opacity = "0"; // Fade out video
