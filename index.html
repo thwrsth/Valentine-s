@@ -47,6 +47,20 @@
             score++;
             document.getElementById("score").innerText = score;
         }
+        <!-- Button to move to the next page -->
+        <button onclick="goToNextPage()" class="next-btn">Next ➡️</button>
+    </div>
+
+    <script>
+        function goToNextPage() {
+            window.location.href = "valentine.html"; // Redirects to second page
+        }
+
+        let score = 0;
+        function increaseScore() {
+            score++;
+            document.getElementById("score").innerText = score;
+        }
     </script>
 </body>
 </html>
