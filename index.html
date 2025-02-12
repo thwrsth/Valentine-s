@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Valentine's Day ❤️</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
         <h1>Happy Valentine's Day, My Love! ❤️</h1>
         <p>You are the most amazing person in my life, and I love you so much! 💖</p>
-        <button id="showMessage">Click for a surprise</button>
-        <div id="hiddenMessage" class="hidden">
-            <p>You make my world brighter every day! 🌟 </p>
-            <video width="300" autoplay loop muted>
-                <source src="heart-animation.mp4" type="video/mp4" class="vid">
-                Your browser does not support the video tag. 
-              </video>
+
+        <!-- Video Section -->
+        <div id="videoContainer">
+            <video id="loveVideo" autoplay loop muted>
+                <source src="heart-animation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-         <!-- Game Section (Hidden at first) -->
-         <div class="game-container" id="game">
+
+        <!-- Game Section (Hidden at first) -->
+        <div class="game-container" id="game">
             <h2>Click the Hearts! ❤️</h2>
             <p class="score">Score: <span id="score">0</span></p>
             <div>
@@ -30,37 +32,10 @@
                 <span class="heart" onclick="increaseScore()">💗</span>
             </div>
         </div>
-    </div>
-  <script>
-         // Function to show the game after a delay
-         setTimeout(function() {
-            document.getElementById("videoContainer").style.opacity = "0"; // Fade out video
-            setTimeout(function() {
-                document.getElementById("videoContainer").style.display = "none"; // Hide video completely
-                document.getElementById("game").style.display = "block"; // Show game
-            }, 1000); // Wait 1s after fade out
-        }, 5000); // Wait 5 seconds before showing game
 
-        // Game logic: Increase score when clicking hearts
-        let score = 0;
-        function increaseScore() {
-            score++;
-            document.getElementById("score").innerText = score;
-        }
-        <!-- Button to move to the next page -->
-        <button onclick="goToNextPage()" class="next-btn">Next ➡️</button>
     </div>
 
-    <script>
-        function goToNextPage() {
-            window.location.href = "valentines.html"; // Redirects to second page
-        }
+    <script src="script.js"></script>
 
-        let score = 0;
-        function increaseScore() {
-            score++;
-            document.getElementById("score").innerText = score;
-        }
-    </script>
 </body>
 </html>
