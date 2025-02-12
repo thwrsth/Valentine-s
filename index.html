@@ -30,6 +30,7 @@
                 <span class="heart" onclick="increaseScore()">💗</span>
             </div>
         </div>
+        <button onclick="goToNextPage()" class="next-btn">Next ➡️</button>
     </div>
     <script src="data.js">
          // Function to show the game after a delay
@@ -42,6 +43,15 @@
         }, 5000); // Wait 5 seconds before showing game
 
         // Game logic: Increase score when clicking hearts
+        let score = 0;
+        function increaseScore() {
+            score++;
+            document.getElementById("score").innerText = score;
+        }
+        function goToNextPage() {
+            window.location.href = "valentine.html"; // Redirects to second page
+        }
+
         let score = 0;
         function increaseScore() {
             score++;
