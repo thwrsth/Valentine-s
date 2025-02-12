@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffdde1;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    color: #ff4b5c;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff2e3d;
+}
+
+/* Hide elements initially */
+.hidden {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Video Styling */
+video {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Game Container */
+.heart {
+    font-size: 40px;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.score {
+    font-size: 20px;
+    margin-top: 10px;
+}
