@@ -1,31 +1,37 @@
 // Initial font size for the "No" button
-let noSize = 1.5; 
+let noSize = 1.5;
 
 // Function for "Yes" button click
 function sayYes() {
-    showPopup("Yay! I love you! ❤️🥰");
+    showPopup("YAYYYYY! I LOVE YOUUU! ❤️🥰");
     launchConfetti();
 }
 
-// Function to make "No" button move randomly when hovered
+// Function to move and shrink "No" button
 function moveNoButton() {
     let noButton = document.getElementById("noButton");
-    let maxX = window.innerWidth - noButton.clientWidth - 20; // Prevents out of bounds
+    
+    // Get screen width and height for movement limits
+    let maxX = window.innerWidth - noButton.clientWidth - 20; // Prevent out-of-bounds
     let maxY = window.innerHeight - noButton.clientHeight - 20;
-
+    
+    // Generate random positions
     let randomX = Math.random() * maxX;
     let randomY = Math.random() * maxY;
 
+    // Move button smoothly
     noButton.style.position = "absolute";
     noButton.style.left = `${randomX}px`;
     noButton.style.top = `${randomY}px`;
 
-    // Shrink button a little every time it moves
+    // Shrink button slightly
     noSize *= 0.9;
-    noButton.style.fontSize = noSize + "em";
+    noButton.style.transform = `scale(${noSize})`;
 
+    // If it becomes too small, fade it out and remove
     if (noSize < 0.5) {
-        noButton.style.display = "none"; // Hide when too small
+        noButton.style.opacity = "0";
+        setTimeout(() => noButton.remove(), 500);
     }
 }
 
