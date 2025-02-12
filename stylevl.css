@@ -1,3 +1,10 @@
+/* Button animations */
+.no-btn {
+    background-color: #cccccc;
+    color: black;
+    transition: all 0.3s ease-in-out; /* Smooth movement and shrink effect */
+}
+
 /* Popup notification styles */
 .popup {
     position: fixed;
