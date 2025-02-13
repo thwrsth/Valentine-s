@@ -39,6 +39,10 @@
         <button onclick="goToNextPage()" class="next-btn">Next ➡️</button>
     </div>
     <script src="data.js">
+            document.getElementById("showMessage").addEventListener("click", function() {
+            document.getElementById("hiddenMessage").classList.toggle("hidden");
+        });
+        
          // Function to show the game after a delay
          setTimeout(function() {
             document.getElementById("videoContainer").style.opacity = "0"; // Fade out video
