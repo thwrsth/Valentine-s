@@ -90,29 +90,17 @@ function playMusic() {
 }
 
 // Function to close the Love Menu
-let isPlaying = false;
-
 function playMusic() {
     let audio = document.getElementById("loveSong");
-    let playButton = document.getElementById("playButton");
 
-    if (!audio) {
-        console.error("Audio element not found!");
-        return;
-    }
-
-    if (isPlaying) {
-        audio.pause();
-        audio.currentTime = 0;
-        playButton.innerText = "🎶 Play Our Song";
-    } else {
+    if (audio) {
         audio.play().then(() => {
-            playButton.innerText = "⏹ Stop Music";
+            console.log("Music is playing!");
         }).catch(error => {
             alert("Tap the screen first to allow music playback! 🎵");
             console.error("Playback error:", error);
         });
+    } else {
+        console.error("Audio element not found!");
     }
-
-    isPlaying = !isPlaying;
 }
