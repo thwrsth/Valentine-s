@@ -17,6 +17,20 @@ function increaseScore() {
 // Toggle hidden message when button is clicked
 document.getElementById("showMessage").addEventListener("click", function() {
     document.getElementById("hiddenMessage").classList.toggle("hidden");
+    const video = document.querySelector(".vid");
+const poem = document.getElementById("poemMessage");
+
+let timer;
+
+video.addEventListener("touchstart", function() {
+    timer = setTimeout(() => {
+        poem.style.display = "block"; // Show the poem after 2 seconds
+    }, 2000);
+});
+
+video.addEventListener("touchend", function() {
+    clearTimeout(timer);
+    poem.style.display = "none"; // Hide the poem when touch ends
 });
 
 // Nextpage//
