@@ -86,7 +86,17 @@ function showPoem() {
 // Function to play a custom MP3 song
 function playMusic() {
     let audio = document.getElementById("loveSong");
-    audio.play();
+
+    if (audio) {
+        audio.play().then(() => {
+            console.log("Music is playing!");
+        }).catch(error => {
+            alert("Tap the screen first to allow music playback! 🎵");
+            console.error("Playback error:", error);
+        });
+    } else {
+        console.error("Audio element not found!");
+    }
 }
 
 // Function to close the Love Menu
