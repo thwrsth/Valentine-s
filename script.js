@@ -3,7 +3,7 @@ let noSize = 1.5;
 
 // Function for "Yes" button click
 function sayYes() {
-    showPopup("Yayyyy! I love you! ❤️🥰", showMenu);
+    showPopup("YAYYYY! I LOVE YOU!!! ❤️🥰", showMenu);
     launchConfetti();
 }
 
@@ -71,10 +71,25 @@ function showMenu() {
 // Function to show a custom poem
 function showPoem() {
     let poem = `
-        You are my sunshine in the darkest days,  
-        My heart beats only for you,  
-        Every moment with you is a melody,  
-        A song I never want to stop singing. ❤️
+      when i first saw you, I knew u're the one,
+      the most beautiful, and unique among thousand,
+      i think about you all the time,
+      and all the seasons,
+      i reread every text you send,
+      and remember what you said,
+      
+      i allways here for you,
+      been here for days waiting you,
+      if you down, i'm here for you,
+      you like the air i breathe,
+      u're my sunsine on a cloudy day,
+      
+      love, love, love, and love for you,
+      just you, you, and you in my mind,
+      i just want to live with you,
+      spend my time with you,
+      and do all things with you,
+      YOU AND ONLY YOU
     `;
 
     let poemBox = document.createElement("div");
