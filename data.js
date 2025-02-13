@@ -23,3 +23,9 @@ document.getElementById("showMessage").addEventListener("click", function() {
  function goToNextPage() {
             window.location.href = "valentines.html"; // Redirects to second page
         }
+
+document.getElementById("showMessage").addEventListener("click", function() {
+    var hiddenMessage = document.getElementById("hiddenMessage");
+    hiddenMessage.style.display = "block";
+    this.style.display = "none"; // Hide the button after clicking
+});
