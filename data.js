@@ -19,6 +19,13 @@ document.getElementById("showMessage").addEventListener("click", function() {
     document.getElementById("hiddenMessage").classList.toggle("hidden");
 });
 
+// Nextpage//
+function goToNextPage() {
+    setTimeout(function() {
+        window.location.href = "valentine.html";
+    }, 3000); // 3000ms = 3 seconds
+}
+
 const video = document.querySelector(".vid");
 const poem = document.getElementById("poemMessage");
 
@@ -34,11 +41,3 @@ video.addEventListener("touchend", function() {
     clearTimeout(timer);
     poem.style.display = "none"; // Hide the poem when touch ends
 });
-
-
-// Nextpage//
-function goToNextPage() {
-    setTimeout(function() {
-        window.location.href = "valentine.html";
-    }, 3000); // 3000ms = 3 seconds
-}
