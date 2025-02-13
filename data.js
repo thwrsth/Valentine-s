@@ -22,7 +22,7 @@ document.getElementById("showMessage").addEventListener("click", function() {
 // Nextpage//
 function goToNextPage() {
     setTimeout(function() {
-        window.location.href = "valentine.html";
+        window.location.href = "valentines.html";
     }, 3000); // 3000ms = 3 seconds
 }
 
