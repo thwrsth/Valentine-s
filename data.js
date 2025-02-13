@@ -23,18 +23,3 @@ document.getElementById("showMessage").addEventListener("click", function() {
  function goToNextPage() {
             window.location.href = "valentines.html"; // Redirects to second page
         }
-
-const video = document.querySelector(".vid");
-const poem = document.getElementById("poemMessage");
-
-let timer;
-
-video.addEventListener("touchstart", function() {
-    timer = setTimeout(() => {
-        poem.style.display = "block";
-    }, 2000); // 2 seconds hold to show the poem
-});
-
-video.addEventListener("touchend", function() {
-    clearTimeout(timer);
-});
