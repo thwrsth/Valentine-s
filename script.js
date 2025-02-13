@@ -90,11 +90,17 @@ function playMusic() {
 }
 
 // Function to close the Love Menu
-function closeMenu() {
-    document.querySelector(".love-menu").remove();
-}
+function playMusic() {
+    let audio = document.getElementById("loveSong");
 
-// Function to close the Poem Box
-function closePoem() {
-    document.querySelector(".poem-box").remove();
+    if (audio) {
+        audio.play().then(() => {
+            console.log("Music is playing!");
+        }).catch(error => {
+            alert("Tap the screen first to allow music playback! 🎵");
+            console.error("Playback error:", error);
+        });
+    } else {
+        console.error("Audio element not found!");
+    }
 }
