@@ -62,7 +62,8 @@ function showMenu() {
     menu.innerHTML = `
         <h2>Now, choose something special! ❤️</h2>
         <button onclick="showPoem()">📜 Read a Love Poem</button>
-        <button onclick="playMusic()">🎶 Choose a Love Song</button>
+        <button onclick="playMusic()">🎶 Play Our Song</button>
+        <button onclick="closeMenu()">❌ Close</button>
     `;
     document.body.appendChild(menu);
 }
