@@ -38,20 +38,3 @@ video.addEventListener("touchstart", function() {
 video.addEventListener("touchend", function() {
     clearTimeout(timer);
 });
-
- //Hiddenpoem//
-const video = document.querySelector(".vid");
-const poem = document.getElementById("poemMessage");
-
-let timer;
-
-video.addEventListener("touchstart", function() {
-    timer = setTimeout(() => {
-        poem.style.display = "block"; // Show the poem after 2 seconds
-    }, 2000);
-});
-
-video.addEventListener("touchend", function() {
-    clearTimeout(timer);
-    poem.style.display = "none"; // Hide the poem when touch ends
-});
