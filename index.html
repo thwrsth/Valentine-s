@@ -50,9 +50,6 @@
         <button onclick="goToNextPage()" class="next-btn">Next ➡️</button>
     </div>
     <script src="data.js">
-            document.getElementById("showMessage").addEventListener("click", function() {
-            document.getElementById("hiddenMessage").classList.toggle("hidden");
-        });
         
          // Function to show the game after a delay
          setTimeout(function() {
@@ -79,6 +76,10 @@
         function goToNextPage() {
             window.location.href = "valentines.html"; // Redirects to second page
         }
+
+           document.getElementById("showMessage").addEventListener("click", function() {
+            document.getElementById("hiddenMessage").classList.toggle("hidden");
+        });
 
     </script>
 </body>
