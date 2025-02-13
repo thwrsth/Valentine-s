@@ -37,10 +37,11 @@ let timer;
 
 video.addEventListener("touchstart", function() {
     timer = setTimeout(() => {
-        poem.style.display = "block";
-    }, 2000); // 2 seconds hold to show the poem
+        poem.style.display = "block"; // Show the poem after 2 seconds
+    }, 2000);
 });
 
 video.addEventListener("touchend", function() {
-    clear
-
+    clearTimeout(timer);
+    poem.style.display = "none"; // Hide the poem when touch ends
+});
