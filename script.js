@@ -3,7 +3,7 @@ let noSize = 1.5;
 
 // Function for "Yes" button click
 function sayYes() {
-    showPopup("Yay! I love you! ❤️🥰");
+    showPopup("Yayyyy! I love you! ❤️🥰");
     launchConfetti();
 }
 
