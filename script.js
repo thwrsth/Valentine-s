@@ -62,40 +62,17 @@ function showMenu() {
     menu.innerHTML = `
         <h2>Now, choose something special! ❤️</h2>
         <button onclick="showPoem()">📜 Read a Love Poem</button>
-        <button onclick="playMusic()">🎶 Play Our Song</button>
-        <button onclick="closeMenu()">❌ Close</button>
+        <button onclick="playMusic()">🎶 Choose a Love Song</button>
     `;
     document.body.appendChild(menu);
 }
 
-// Function to show a custom poem
+// Function to show a romantic poem
 function showPoem() {
-    let poem = `
-        You are my sunshine in the darkest days,  
-        My heart beats only for you,  
-        Every moment with you is a melody,  
-        A song I never want to stop singing. ❤️
-    `;
-
-    let poemBox = document.createElement("div");
-    poemBox.className = "poem-box";
-    poemBox.innerHTML = `<p>${poem.replace(/\n/g, "<br>")}</p> <button onclick="closePoem()">❌ Close</button>`;
-    document.body.appendChild(poemBox);
+    alert("You are the melody in my heart, the light in my sky, and the love of my life. ❤️");
 }
 
-// Function to play a custom MP3 song
-// Function to play a custom MP3 song
+// Function to suggest a romantic song
 function playMusic() {
-    let audio = document.getElementById("loveSong");
-    audio.play();
-}
-
-// Function to close the Love Menu
-function closeMenu() {
-    document.querySelector(".love-menu").remove();
-}
-
-// Function to close the Poem Box
-function closePoem() {
-    document.querySelector(".poem-box").remove();
+    alert("How about 'Perfect' by Ed Sheeran? 🎶 Or choose your own favorite love song!");
 }
