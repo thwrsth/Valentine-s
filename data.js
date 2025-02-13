@@ -30,17 +30,17 @@ document.getElementById("showMessage").addEventListener("click", function() {
     this.style.display = "none"; // Hide the button after clicking
 });
 
-const image = document.getElementById("specialImage");
+const video = document.querySelector(".vid");
 const poem = document.getElementById("poemMessage");
 
 let timer;
 
-image.addEventListener("touchstart", function() {
+video.addEventListener("touchstart", function() {
     timer = setTimeout(() => {
         poem.style.display = "block";
     }, 2000); // 2 seconds hold to show the poem
 });
 
-image.addEventListener("touchend", function() {
-    clearTimeout(timer);
-});
+video.addEventListener("touchend", function() {
+    clear
+
