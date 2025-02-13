@@ -67,12 +67,33 @@ function showMenu() {
     document.body.appendChild(menu);
 }
 
-// Function to show a romantic poem
+// Function to show a custom poem
 function showPoem() {
-    alert("You are the melody in my heart, the light in my sky, and the love of my life. ❤️");
+    let poem = `
+        You are my sunshine in the darkest days,  
+        My heart beats only for you,  
+        Every moment with you is a melody,  
+        A song I never want to stop singing. ❤️
+    `;
+
+    let poemBox = document.createElement("div");
+    poemBox.className = "poem-box";
+    poemBox.innerHTML = `<p>${poem.replace(/\n/g, "<br>")}</p> <button onclick="closePoem()">❌ Close</button>`;
+    document.body.appendChild(poemBox);
 }
 
-// Function to suggest a romantic song
+// Function to play a custom MP3 song
 function playMusic() {
-    alert("How about 'Perfect' by Ed Sheeran? 🎶 Or choose your own favorite love song!");
+    let audio = document.getElementById("loveSong");
+    audio.play();
+}
+
+// Function to close the Love Menu
+function closeMenu() {
+    document.querySelector(".love-menu").remove();
+}
+
+// Function to close the Poem Box
+function closePoem() {
+    document.querySelector(".poem-box").remove();
 }
