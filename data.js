@@ -20,6 +20,8 @@ document.getElementById("showMessage").addEventListener("click", function() {
 });
 
 // Nextpage//
- function goToNextPage() {
-            window.location.href = "valentines.html"; // Redirects to second page
-        }
+function goToNextPage() {
+    setTimeout(function() {
+        window.location.href = "valentine.html";
+    }, 3000); // 3000ms = 3 seconds
+}
