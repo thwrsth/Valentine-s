@@ -56,9 +56,15 @@
     ontouchstart="moveNoButton()">No</button>
         </div>
 
-        <!-- Play Button -->
-<button onclick="playMusic()">🎶 Play Our Song</button>
+        <!-- Play/Pause Button -->
+<button id="playButton" onclick="playMusic()">🎶 Play Our Song</button>
 
+<!-- Audio Element -->
+<audio id="loveSong">
+    <source src="love-song.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+</audio>
+        
 <!-- Audio Element (Put this in your <body>) -->
 <audio id="loveSong">
     <source src=Simple_Says_I_LOVE_YOU.mp3" type="audio/mp3">
