@@ -3,7 +3,7 @@ let noSize = 1.5;
 
 // Function for "Yes" button click
 function sayYes() {
-    showPopup("Yayyyy! I love you! ❤️🥰");
+    showPopup("Yayyyy! I love you! ❤️🥰", showMenu);
     launchConfetti();
 }
 
@@ -11,24 +11,19 @@ function sayYes() {
 function moveNoButton() {
     let noButton = document.getElementById("noButton");
 
-    // Get screen width and height for movement limits
     let maxX = window.innerWidth - noButton.clientWidth - 20;
     let maxY = window.innerHeight - noButton.clientHeight - 20;
 
-    // Generate random positions
     let randomX = Math.random() * maxX;
     let randomY = Math.random() * maxY;
 
-    // Move button smoothly
     noButton.style.position = "absolute";
     noButton.style.left = `${randomX}px`;
     noButton.style.top = `${randomY}px`;
 
-    // Shrink button slightly
     noSize *= 0.9;
     noButton.style.transform = `scale(${noSize})`;
 
-    // If it becomes too small, fade it out and remove
     if (noSize < 0.5) {
         noButton.style.opacity = "0";
         setTimeout(() => noButton.remove(), 500);
@@ -44,16 +39,62 @@ function launchConfetti() {
     });
 }
 
-// Function to show a custom popup notification
-function showPopup(message) {
+// Function to show a popup notification, then show the menu
+function showPopup(message, callback) {
     let popup = document.createElement("div");
     popup.className = "popup";
     popup.innerText = message;
     document.body.appendChild(popup);
 
-    // Remove the popup after 3 seconds
     setTimeout(() => {
         popup.style.opacity = "0";
-        setTimeout(() => popup.remove(), 500);
-    }, 3000);
+        setTimeout(() => {
+            popup.remove();
+            if (callback) callback();
+        }, 500);
+    }, 2000);
+}
+
+// Function to show the Love Menu
+function showMenu() {
+    let menu = document.createElement("div");
+    menu.className = "love-menu";
+    menu.innerHTML = `
+        <h2>Now, choose something special! ❤️</h2>
+        <button onclick="showPoem()">📜 Read a Love Poem</button>
+        <button onclick="playMusic()">🎶 Play Our Song</button>
+        <button onclick="closeMenu()">❌ Close</button>
+    `;
+    document.body.appendChild(menu);
+}
+
+// Function to show a custom poem
+function showPoem() {
+    let poem = `
+        You are my sunshine in the darkest days,  
+        My heart beats only for you,  
+        Every moment with you is a melody,  
+        A song I never want to stop singing. ❤️
+    `;
+
+    let poemBox = document.createElement("div");
+    poemBox.className = "poem-box";
+    poemBox.innerHTML = `<p>${poem.replace(/\n/g, "<br>")}</p> <button onclick="closePoem()">❌ Close</button>`;
+    document.body.appendChild(poemBox);
+}
+
+// Function to play a custom MP3 song
+function playMusic() {
+    let audio = document.getElementById("loveSong");
+    audio.play();
+}
+
+// Function to close the Love Menu
+function closeMenu() {
+    document.querySelector(".love-menu").remove();
+}
+
+// Function to close the Poem Box
+function closePoem() {
+    document.querySelector(".poem-box").remove();
 }
